@@ -21,6 +21,11 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
+    @GetMapping("/department/{code}")
+    public ResponseEntity<List<Employee>> getByDepartment(@PathVariable("code") String departmentCode){
+        return ResponseEntity.ok(employeeService.getByDepartmentCode(departmentCode));
+    }
+
     @PostMapping
     public ResponseEntity<Employee> createOrUpdateEmployee(@RequestBody Employee employee) {
         Employee savedEmployee = employeeService.saveEmployee(employee);

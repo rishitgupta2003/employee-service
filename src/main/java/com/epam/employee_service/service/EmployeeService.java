@@ -46,6 +46,10 @@ public class EmployeeService {
                 .build();
     }
 
+    public List<Employee> getByDepartmentCode(String departmentCode){
+        return employeeRepository.findByDepartmentCode(departmentCode);
+    }
+
     public Employee saveEmployee(Employee employee) {
         return employeeRepository.save(employee);
     }

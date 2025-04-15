@@ -1,8 +1,6 @@
 package com.epam.employee_service.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @AllArgsConstructor
@@ -13,6 +11,7 @@ import lombok.*;
 @Data
 public class Employee {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Column
