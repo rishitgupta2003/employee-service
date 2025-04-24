@@ -12,4 +12,5 @@ public class Department {
     private String departmentName;
     private String departmentDescription;
     private String departmentCode;
+    private String orgCode;
 }
